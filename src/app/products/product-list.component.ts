@@ -31,7 +31,7 @@ export class ProductListComponent implements OnInit {
       releaseDate: 'March 18, 2022',
       description: '15 litre capacity rolling garden cart',
       price: 32.99,
-      starRating: 4.2,
+      starRating: 3.2,
       imageUrl: '../../assets/images/clipper.svg',
     },
     {
@@ -60,5 +60,9 @@ export class ProductListComponent implements OnInit {
       return product.productName.toLowerCase().includes(filterBy);
     });
     return filteredProducts;
+  }
+
+  onRatingClicked(message: string): void {
+    this.pageTitle = `Communication message: ${message}`;
   }
 }
